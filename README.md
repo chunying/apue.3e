@@ -2,6 +2,13 @@
 
 Source code downloaded and extracted from the [official website](http://www.apuebook.com/code3e.html).
 
+## Build
+
+Simply type `make` to build everything. Tested on
+- `Linux x86_64`: gcc 12 and glibc 2.36
+- `Linux aarch64`: gcc 12 and glibc 2.36
+- `Mac OS X (arm64)`: OS version 15.1 and clang version 16.0.0
+
 ## The original `README`
 
 ```

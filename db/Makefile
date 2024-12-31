@@ -9,7 +9,7 @@ ifeq "$(PLATFORM)" "solaris"
   LDCMD=$(LD) -64 -G -Bdynamic -R/lib/64:/usr/ucblib/sparcv9 -o libapue_db.so.1 -L/lib/64 -L/usr/ucblib/sparcv9 -L$(ROOT)/lib -lapue db.o
   EXTRALD=-m64 -R.
 else
-  LDCMD=$(CC) -shared -Wl,-dylib -o libapue_db.so.1 -L$(ROOT)/lib -lapue -lc db.o
+  LDCMD=$(CC) -shared -o libapue_db.so.1 -L$(ROOT)/lib -lapue -lc db.o
 endif
 ifeq "$(PLATFORM)" "linux"
   EXTRALD=-Wl,-rpath=.

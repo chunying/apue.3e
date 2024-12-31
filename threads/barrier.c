@@ -12,7 +12,7 @@ long snums[NUMNUM];
 
 pthread_barrier_t b;
 
-#ifdef SOLARIS
+#if defined(SOLARIS) || defined(LINUX)
 #define heapsort qsort
 #else
 extern int heapsort(void *, size_t, size_t,

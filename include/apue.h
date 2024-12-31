@@ -18,6 +18,9 @@
 #if defined(MACOS) || !defined(TIOCGWINSZ)
 #include <sys/ioctl.h>
 #endif
+#if defined(LINUX)
+#include <sys/sysmacros.h>
+#endif
 
 #include <stdio.h>		/* for convenience */
 #include <stdlib.h>		/* for convenience */

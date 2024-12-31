@@ -15,6 +15,8 @@ ifeq "$(PLATFORM)" "solaris"
   TOUT = timeout.o
 endif
 
+CFLAGS	+= -Wno-maybe-uninitialized
+
 PROGS =	atfork suspend
 
 all:	$(PROGS) detach.o getenv1.o getenv2.o getenv3.o $(TOUT)

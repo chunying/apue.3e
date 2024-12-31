@@ -569,7 +569,7 @@ _db_writeidx(DB *db, const char *key,
              off_t offset, int whence, off_t ptrval)
 {
 	struct iovec	iov[2];
-	char			asciiptrlen[PTR_SZ + IDXLEN_SZ + 1];
+	char			asciiptrlen[PTR_SZ + IDXLEN_SZ + 1 + 16];
 	int				len;
 
 	if ((db->ptrval = ptrval) < 0 || ptrval > PTR_MAX)
